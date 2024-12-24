@@ -19,10 +19,13 @@ class Singleton_ConnexionPDO extends PDO
                 $var[1] = "";
             $arr[$var[0]] = trim($var[1]);
         }
-
-        parent::__construct('mysql:host='.$arr["IPBDD"].';dbname='.$arr["BDD"].';charset=UTF8',
-            $arr["USERBDD"],
-            $arr["MDPBDD"],
+//'mysql:host='.$arr["IPBDD"].';dbname='.$arr["BDD"].';charset=UTF8',
+//            $arr["USERBDD"],
+//            $arr["MDPBDD"],
+//            array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION )
+        parent::__construct('mysql:host='.'127.0.0.1'.';dbname='.'bddmvc2024',
+            'root',
+            '',
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
 
     }
